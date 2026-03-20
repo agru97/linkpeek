@@ -62,7 +62,7 @@
 		"url": "https://github.com/agru97/linkpeek/issues"
 	},
 	"engines": {
-		"node": ">=18.17.0"
+		"node": ">=20.0.0"
 	},
 	"dependencies": {
 		"htmlparser2": "^11.0.0"
