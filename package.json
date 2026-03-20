@@ -1,0 +1,76 @@
+{
+	"name": "linkpeek",
+	"version": "1.0.0",
+	"description": "Fast link preview metadata from any URL. One dependency.",
+	"type": "module",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"import": "./dist/index.js",
+			"require": "./dist/index.cjs"
+		}
+	},
+	"main": "./dist/index.cjs",
+	"module": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"files": [
+		"dist"
+	],
+	"sideEffects": false,
+	"scripts": {
+		"build": "tsup",
+		"test": "vitest run",
+		"test:watch": "vitest",
+		"lint": "biome check .",
+		"lint:fix": "biome check --write .",
+		"typecheck": "tsc --noEmit",
+		"prepublishOnly": "npm run build"
+	},
+	"keywords": [
+		"link-preview",
+		"link preview",
+		"open graph",
+		"opengraph",
+		"og",
+		"ogp",
+		"twitter card",
+		"json-ld",
+		"metadata",
+		"meta tags",
+		"unfurl",
+		"url metadata",
+		"scraper",
+		"streaming",
+		"htmlparser2",
+		"oembed",
+		"sax",
+		"fast",
+		"lightweight",
+		"ssrf",
+		"node",
+		"bun",
+		"deno"
+	],
+	"author": "Adrian Gruber",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/agru97/linkpeek"
+	},
+	"homepage": "https://github.com/agru97/linkpeek#readme",
+	"bugs": {
+		"url": "https://github.com/agru97/linkpeek/issues"
+	},
+	"engines": {
+		"node": ">=18.17.0"
+	},
+	"dependencies": {
+		"htmlparser2": "^11.0.0"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^2.4.8",
+		"tsup": "^8.0.0",
+		"typescript": "^5.5.0",
+		"vitest": "^4.1.0"
+	}
+}
