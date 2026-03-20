@@ -55,11 +55,11 @@
 	"license": "MIT",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/agru97/linkpeek"
+		"url": "https://github.com/thegruber/linkpeek"
 	},
-	"homepage": "https://github.com/agru97/linkpeek#readme",
+	"homepage": "https://github.com/thegruber/linkpeek#readme",
 	"bugs": {
-		"url": "https://github.com/agru97/linkpeek/issues"
+		"url": "https://github.com/thegruber/linkpeek/issues"
 	},
 	"engines": {
 		"node": ">=20.0.0"
