@@ -36,7 +36,9 @@ Also works with `bun add linkpeek` and `import { preview } from "npm:linkpeek"` 
 - **SSRF protection** — private/internal IPs blocked by default
 - **Runs on Node.js 20+, Bun, and Deno** (tested in CI) — uses only Web Standard APIs
 
-> linkpeek should be used server-side only. Use it in an API route and return the result to the client.
+> **Note:** linkpeek should be used server-side only. Use it in an API route and return the result to the client.
+
+---
 
 ## Full Result
 
@@ -172,13 +174,21 @@ console.log(result.title); // "Hello"
 
 Returns `PreviewResult`.
 
+---
+
 ## How it works
 
 1. **Twitterbot User-Agent** — gets pre-rendered HTML from most platforms, skipping client-side rendering entirely
+
 2. **Streaming download with byte limit** — aborts after 30 KB (default). OG tags live in the first 10-30 KB; YouTube pages are 2 MB+ but we never download more than needed
+
 3. **SAX parsing** — processes HTML as a character stream with no DOM construction. ~2 ms parse time
+
 4. **Head-first parsing** — all standard metadata is in `<head>`. Body scanning for JSON-LD and `<img>` fallbacks is opt-in via `includeBodyContent: true` (or `presets.quality`)
+
 5. **Zero extra HTTP calls** — no favicon fetching from Google APIs, no oEmbed resolution by default
+
+---
 
 ## Framework Examples
 
