@@ -36,7 +36,7 @@ Also works with `bun add linkpeek` and `import { preview } from "npm:linkpeek"` 
 - **SSRF protection** — private/internal IPs blocked by default
 - **Runs on Node.js 20+, Bun, and Deno** (tested in CI) — uses only Web Standard APIs
 
-> linkpeek is server-side only. Use it in an API route and return the result to the client.
+> linkpeek should be used server-side only. Use it in an API route and return the result to the client.
 
 ## Full Result
 
