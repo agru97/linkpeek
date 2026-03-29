@@ -328,7 +328,9 @@ export function parseHTML(
 	const video = get("og:video", "og:video:url", "og:video:secure_url") || null;
 	const audio = get("og:audio", "og:audio:url", "og:audio:secure_url") || null;
 	const lang =
-		htmlLang || get("content-language") || (locale ? locale.split("_")[0] : null);
+		htmlLang ||
+		get("content-language") ||
+		(locale ? locale.split("_")[0] : null);
 
 	const twitterCard = get("twitter:card") || null;
 	const twitterSite = get("twitter:site") || null;
